@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- capaz ocupas hacer algo mas chico xd, pq no se si de bien
+    el espacio para las imagens que van arriba del menu de abajo-->
+    <!-- Texto parte de arriba -->
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Texto parte de arriba -->
+        <TextView
+            android:id="@+id/deliverNowTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deliver Now"
+            android:textSize="12sp"
+            android:textColor="#333333"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calle Relance 6318 ▼"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_below="@+id/deliverNowTextView"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="4dp" />
+
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignTop="@+id/deliverNowTextView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:src="@mipmap/f" />
+
+    </RelativeLayout>
+
+    <!-- Barra de búsqueda -->
+    <RelativeLayout
+        android:id="@+id/searchBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#F5F5F5"
+        android:layout_below="@id/topLayout"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <!-- Icono dentro de la barra de búsqueda -->
+        <ImageView
+            android:id="@+id/searchIconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/busqueda"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp" />
+
+        <!-- EditText para la búsqueda -->
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/searchIconImageView"
+            android:hint="Search Uber Eats"
+            android:background="@android:color/transparent"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <!-- Cuadros -->
+    <LinearLayout
+        android:id="@+id/categoriesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchBarLayout"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <!-- Primer cuadro -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="#E0E0E0">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#CCCCCC"
+                android:scaleType="centerCrop"
+                />
+
+            <!-- Icono en medio -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/restaurant" />
+        </RelativeLayout>
+
+        <!-- Segundo cuadro -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="#E0E0E0">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#CCCCCC"
+                android:scaleType="centerCrop"
+                />
+
+            <!-- Icono en medio -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/tc" />
+        </RelativeLayout>
+
+        <!-- Tercer cuadro -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="#E0E0E0">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#CCCCCC"
+                android:scaleType="centerCrop"
+                />
+
+            <!-- Icono en medio -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/alcohol" />
+        </RelativeLayout>
+
+        <!-- Cuarto cuadro -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#E0E0E0">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#CCCCCC"
+                android:scaleType="centerCrop"
+                />
+
+            <!-- Icono en medio -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/linea" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Texto debajo de los cuadros -->
+    <LinearLayout
+        android:id="@+id/textsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/categoriesLayout"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/restaurantTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Restaurant"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/groceryTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Grocery"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/alcoholTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Alcohol"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/seeAllTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="See All"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <!-- ciruculos -->
+    <HorizontalScrollView
+        android:id="@+id/imageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textsLayout"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/circularImagesLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:background="#CCCCCC"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/circuloi"/>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
+                android:src="@mipmap/circuloi"
+                android:background="#CCCCCC"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center" />
+
+            <!-- Imagen 3 -->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
+                android:src="@mipmap/circuloi"
+                android:background="#CCCCCC"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center" />
+
+            <!-- Imagen 4 -->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
+                android:src="@mipmap/circuloi"
+                android:background="#CCCCCC"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center" />
+
+            <!-- Imagen 5 -->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
+                android:src="@mipmap/circuloi"
+                android:background="#CCCCCC"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- Imagen horizontal grande con etiqueta -->
+    <RelativeLayout
+        android:id="@+id/bigImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_below="@id/imageScrollView"
+        android:layout_marginTop="8dp">
+
+        <!-- Imagen -->
+        <ImageView
+            android:id="@+id/bigImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ensaldas" />
+
+        <!-- Etiqueta -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#0C7F33">
+
+            <TextView
+                android:id="@+id/labelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save on select items"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_margin="4dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Avocalia -->
+    <!-- en teoria va una imagen de rating de 4.7 xd, pero no encontre
+    tambien va otra cosa al lado de mxn12-->
+    <RelativeLayout
+        android:id="@+id/detailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bigImageLayout"
+        android:layout_marginTop="8dp">
+
+
+
+        <!-- Texto "Avocalia" -->
+        <ImageView
+            android:id="@+id/smallIcon1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignBaseline="@id/avocaliaTextView"
+            android:layout_marginStart="-60dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toEndOf="@id/avocaliaTextView">
+
+        </ImageView>
+
+
+        <TextView
+            android:id="@+id/avocaliaTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avocalia"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Icono grande a la derecha del texto -->
+        <TextView
+            android:id="@+id/orderDetailsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/avocaliaTextView"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="4dp"
+            android:text=" • MXN12 Fee • 15-30min"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/bigIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignBaseline="@id/avocaliaTextView"
+            android:layout_marginStart="204dp"
+            android:layout_toEndOf="@id/orderDetailsTextView"
+            android:src="@mipmap/rating" />
+    </RelativeLayout>
+
+
+    <!-- Barra de navegación -->
+    <!-- otro detalle que falta es que creo que en el icono
+     de grocery deberia de ir un punto verde en la esquina-->
+    <LinearLayout
+        android:id="@+id/navigationBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp">
+
+        <!-- Fila de iconos -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <!-- Icono "Home" -->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/hogar" />
+            </RelativeLayout>
+
+            <!-- Icono "Grocery" -->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/manzana" />
+            </RelativeLayout>
+
+            <!-- Icono "Browse" -->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/menu"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <!-- Icono "Carts" -->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/carrito"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <!-- Icono "Accounts" -->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/usuario"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- Fila de textos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:layout_marginTop="4dp">
+
+            <!-- Texto "Home" -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <!-- Texto "Grocery" -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Grocery"
+                android:textSize="10sp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <!-- Texto "Browse" -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Browse"
+                android:textSize="10sp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <!-- Texto "Carts" -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Carts"
+                android:textSize="10sp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <!-- Texto "Accounts" -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Accounts"
+                android:textSize="10sp"
+                android:layout_weight="1"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
