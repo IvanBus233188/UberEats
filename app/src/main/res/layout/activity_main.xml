@@ -274,16 +274,16 @@
                             android:layout_height="60dp"
                             android:layout_gravity="center"
                             android:layout_marginEnd="8dp"
-                            android:background="#CCCCCC"
                             android:scaleType="centerCrop"
-                            android:src="@mipmap/circuloi"/>
+                            android:src="@mipmap/Logo"
+                            android:background="@drawable/circle"/>
 
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_marginEnd="8dp"
-                            android:src="@mipmap/circuloi"
-                            android:background="#CCCCCC"
+                            android:src="@mipmap/Logo"
+                            android:background="@drawable/circle"
                             android:scaleType="centerCrop"
                             android:layout_gravity="center" />
 
@@ -292,8 +292,8 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_marginEnd="8dp"
-                            android:src="@mipmap/circuloi"
-                            android:background="#CCCCCC"
+                            android:src="@mipmap/Logo"
+                            android:background="@drawable/circle"
                             android:scaleType="centerCrop"
                             android:layout_gravity="center" />
 
@@ -302,8 +302,7 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_marginEnd="8dp"
-                            android:src="@mipmap/circuloi"
-                            android:background="#CCCCCC"
+                            android:src="@mipmap/Logo"
                             android:scaleType="centerCrop"
                             android:layout_gravity="center" />
 
@@ -312,8 +311,8 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_marginEnd="8dp"
-                            android:src="@mipmap/circuloi"
-                            android:background="#CCCCCC"
+                            android:src="@mipmap/Logo"
+                            android:background="@drawable/circle"
                             android:scaleType="centerCrop"
                             android:layout_gravity="center" />
 
@@ -440,7 +439,6 @@
                     android:id="@+id/imageScrollViewFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/textsLayout"
                     android:layout_marginTop="8dp">
 
                     <LinearLayout
@@ -527,12 +525,24 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center">
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/manzana" />
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/manzana" />
+
+                        <View
+                            android:id="@+id/greenDot"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="top|end"
+                            android:background="@drawable/circle"/>
+                    </FrameLayout>
+
                 </RelativeLayout>
 
                 <!-- Icono "Browse" -->
